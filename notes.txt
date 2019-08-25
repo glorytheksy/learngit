@@ -15,5 +15,14 @@ add可以分开添加不同的文件至仓库，而commit是提交所有已经�
 
 版本回退过程：git log --pretty=oneline 查看提交历史，找到每个版本的 commit id，之后用 git reset --hard commit id 来回退到某个版本；当然回退也不一定非要用commit id，我们可以使用HEAD来代替！HEAD表示当前版本，HEAD^表示上个版本，HEAD^^表示上上个版本，依次类推。
 
+那么如果我新写的代码还没有add和commit呢，怎么回到前面的版本，这个简单，先把未能提交的commit了，再回退
+
 那如果我要恢复回退之前的版本怎么办呢，这时候就必须用到commit id了，或者在terminal理这往回翻一下记录，或者用 git reflog 查看你的命令历史
+
+
+3.3 工作区和暂存区
+
+工作区就是创建仓库的目录，这个没什么好说的
+
+说到暂存区，就要提到add和commit了，add其实就是把修改先放到暂存区，而commit就是把暂存区的内容全部提交到当前分支。比较特殊的一点是，一个从来没有被add过文件，它的状态是untracked；如果它曾经被add过，后来再修改它，它的状态会是modified。
 
