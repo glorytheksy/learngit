@@ -10,3 +10,10 @@ add可以分开添加不同的文件至仓库，而commit是提交所有已经�
 检查状态： git status
 
 查看修改： 在 add 之前，git diff 文件名
+
+2.2 版本回退
+
+版本回退过程：git log --pretty=oneline 查看提交历史，找到每个版本的 commit id，之后用 git reset --hard commit id 来回退到某个版本；当然回退也不一定非要用commit id，我们可以使用HEAD来代替！HEAD表示当前版本，HEAD^表示上个版本，HEAD^^表示上上个版本，依次类推。
+
+那如果我要恢复回退之前的版本怎么办呢，这时候就必须用到commit id了，或者在terminal理这往回翻一下记录，或者用 git reflog 查看你的命令历史
+
