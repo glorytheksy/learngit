@@ -14,6 +14,14 @@ git checkout dev
 switched to branch 'dev'
 我们可以用命令 git branch 查看当前的分支，其会列出所有分支
 
+切换分支：git switch 分支名，或者 git switch -c 分支名
+
+合并分支：git merge 分支名
+
+删除分支：git branch -d 分支名
+
+
+
 
 
 
