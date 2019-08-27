@@ -20,6 +20,7 @@ switched to branch 'dev'
 
 删除分支：git branch -d 分支名
 
+2. 解决冲突
 
 
 
