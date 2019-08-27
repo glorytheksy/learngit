@@ -8,4 +8,15 @@
 
 分支合并的本质：母分支的指针master指向dev分支的指针上，这时可以删除dev指针
 
+创建分支：git checkout -b 分支名；这里-b代表创建并切换相当于一下语句：
+git branch dev
+git checkout dev
+switched to branch 'dev'
+我们可以用命令 git branch 查看当前的分支，其会列出所有分支
+
+
+
+
+
+
 
