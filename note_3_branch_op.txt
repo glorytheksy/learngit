@@ -21,6 +21,9 @@ switched to branch 'dev'
 删除分支：git branch -d 分支名
 
 2. 解决冲突
+比如新建分支feature，进行了一系列的修改，与此同时主分支master也有一系列修改。则如果此时master在合并feature的时候，不可以像上个小节那样，简单的将feature的指针指向master的分支；而是需要将master 的 修改 和 feature的修改合并起来。
+
+而这种修改，会带来冲突（一般情况下），这时候就需要我们手动修改冲突。之后在将修改放进暂存区并提交。
 
 
 
