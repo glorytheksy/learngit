@@ -32,6 +32,8 @@ switched to branch 'dev'
 3.2 分支策略
 略
 
+4 bug 分支
+
 
 
 
