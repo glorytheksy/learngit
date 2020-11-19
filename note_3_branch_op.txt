@@ -35,6 +35,15 @@ switched to branch 'dev'
 4 bug 分支
 如果在分支dev开发中途boss告诉你需要修改master上的bug，但你这时dev分支开发到一半，你又不想commit怎么办呢？我们可以把当前的修改存起来（不是存在暂存区，更不是commit到仓库，而是一个独立的区域），用 git stash 命令就可以， 这时输入 git status 你会发现工作区已经没有修改的痕迹了。 bug修改完之后，你回到dev分支，输入 git stash list 就可查看你之前存储的未提交的代码，如果要恢复他们，有两个指令可以选：(1)git stash apply，这个命令不会删除stash，你需要手动 git stash drop 来删除stash (2) git stash pop，该命令在恢复stash内容至工作区的同时会删除stash。
 
+5. 删除未merge的分支
+之前我们删除已经merge过的分支时，用的是 git branch -d 分支名，但有时候我们需要删除未merge过的分支，这时候 -d 就要改为 -D，意为强制删除。 否则会报错
+
+6. 多人协作
+哪些分支需要放在远程上： MASTER, DEV, 以及需要共同协作完成的feature分支。
+
+从远程拉取分支代码至本地：git checkout -b branch-name origin/branch-name
+
+建立本地分支与远程分支的关联：git branch --set-upstream branch-name origin/branch-name
 
 
 
